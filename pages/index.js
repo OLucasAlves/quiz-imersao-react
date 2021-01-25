@@ -25,6 +25,17 @@ export default function Home() {
     <>
       <Head>
 
+        <title>Data Science Quiz</title>
+        <meta name="title" content="Data Science Quiz" />
+
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://quiz-imersao-react.vercel.app/"
+        />
+        <meta property="og:title" content="Data Science Quiz" />
+
         <meta
           property="og:image"
           content="https://i.ibb.co/Jj5F7Fv/3842271.jpg"
