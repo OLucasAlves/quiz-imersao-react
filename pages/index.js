@@ -18,41 +18,49 @@ export const QuizContainer = styled.div`
   }
 `;
 
-<Head>
-<meta property="og:image" content={db.bg} key="ogimage" />      
-</Head>
+
 
 export default function Home() {
   return (
-    
-    <QuizBackground backgroundImage={db.bg}>
-      <QuizContainer>
-        <QuizLogo />
-        <Widget>
+    <>
+      <Head>
 
-          <Widget.Header>
-            <h1>Data Science Quiz</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <p>Este Quiz tem como objetivo exercitar seus conhecimentos em Data Science</p>
-          </Widget.Content>
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/Jj5F7Fv/3842271.jpg"
+        />
 
-        </Widget>
 
-        <Widget>
+      </Head>
+      <QuizBackground backgroundImage={db.bg}>
+        <QuizContainer>
+          <QuizLogo />
+          <Widget>
 
-          <Widget.Header>
-            <h1>Quizes da Galera</h1>
-          </Widget.Header>
+            <Widget.Header>
+              <h1>Data Science Quiz</h1>
+            </Widget.Header>
+            <Widget.Content>
+              <p>Este Quiz tem como objetivo exercitar seus conhecimentos em Data Science</p>
+            </Widget.Content>
 
-          <Widget.Content>
-            <p>Quizes da Galera</p>
-          </Widget.Content>
-        </Widget>
-        <Footer />
+          </Widget>
 
-      </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/OLucasAlves" />
-    </QuizBackground>
+          <Widget>
+
+            <Widget.Header>
+              <h1>Quizes da Galera</h1>
+            </Widget.Header>
+
+            <Widget.Content>
+              <p>Quizes da Galera</p>
+            </Widget.Content>
+          </Widget>
+          <Footer />
+
+        </QuizContainer>
+        <GitHubCorner projectUrl="https://github.com/OLucasAlves" />
+      </QuizBackground>
+    </>
   );
 }
