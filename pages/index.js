@@ -5,7 +5,7 @@ import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
-
+import Head from 'next/head'
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -18,35 +18,41 @@ export const QuizContainer = styled.div`
   }
 `;
 
+<Head>
+<meta property="og:image" content={db.bg} key="ogimage" />      
+</Head>
+
 export default function Home() {
   return (
+    
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <QuizLogo />
         <Widget>
-          <Widget.Content>
-            <Widget.Header>
-              <h1>Aqui um titulo legal</h1>
-            </Widget.Header>
 
-            <p>Aqui uma descrição legal</p>
+          <Widget.Header>
+            <h1>Data Science Quiz</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <p>Este Quiz tem como objetivo exircitar seus conhecimentos em Data Science</p>
           </Widget.Content>
 
         </Widget>
 
         <Widget>
+
+          <Widget.Header>
+            <h1>Quizes da Galera</h1>
+          </Widget.Header>
+
           <Widget.Content>
-            <Widget.Header>
-              <h1>Aqui um titulo legal</h1>
-            </Widget.Header>
-
-
-            <p>Aqui uma descrição legal</p>
+            <p>Quizes da Galera</p>
           </Widget.Content>
         </Widget>
         <Footer />
-        
+
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/OLucasAlves" /> 
+      <GitHubCorner projectUrl="https://github.com/OLucasAlves" />
     </QuizBackground>
   );
 }
