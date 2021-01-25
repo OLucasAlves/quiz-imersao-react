@@ -34,7 +34,7 @@ export default function Home() {
             <h1>Data Science Quiz</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>Este Quiz tem como objetivo exircitar seus conhecimentos em Data Science</p>
+            <p>Este Quiz tem como objetivo exercitar seus conhecimentos em Data Science</p>
           </Widget.Content>
 
         </Widget>
