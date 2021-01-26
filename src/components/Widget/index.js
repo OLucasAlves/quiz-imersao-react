@@ -47,6 +47,16 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
+
+
 `;
+
+Widget.Form = styled.div`
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
 
 export default Widget;
