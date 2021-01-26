@@ -6,6 +6,8 @@ import QuizLogo from '../src/components/QuizLogo';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Head from 'next/head'
+import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -18,11 +20,12 @@ export const QuizContainer = styled.div`
   }
 `;
 
-
-
 export default function Home() {
+  const router = useRouter();
+  const [name,setName] = React.useState('');
   return (
-    <>
+
+    <QuizBackground backgroundImage={db.bg}>
       <Head>
 
         <title>Data Science Quiz</title>
@@ -43,35 +46,51 @@ export default function Home() {
 
 
       </Head>
-      <QuizBackground backgroundImage={db.bg}>
-        <QuizContainer>
-          <QuizLogo />
-          <Widget>
+      <QuizContainer>
+        <QuizLogo />
+        <Widget>
 
-            <Widget.Header>
-              <h1>Data Science Quiz</h1>
-            </Widget.Header>
-            <Widget.Content>
-              <p>Este Quiz tem como objetivo exercitar seus conhecimentos em Data Science</p>
-            </Widget.Content>
+          <Widget.Header>
+            <h1>Data Science Quiz</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <form onSubmit={function(e){
+              e.preventDefault();
+              router.push(`/quiz?name=${name}`);
+              console.log('Fazendo uma submissão por meio do React')
+            }}>
+              <input
+                onChange={function (e){
+                  console.log(e.target.value);
+                  //name = e.target.value;
+                  setName(e.target.value);
+                }} 
+                placeholder="Diz ai seu nome" />
 
-          </Widget>
+              <button type="submit" disabled={name.length === 0}>
+                Jogar {name}
+              </button>
+            </form>
+          </Widget.Content>
 
-          <Widget>
+        </Widget>
 
-            <Widget.Header>
-              <h1>Quizes da Galera</h1>
-            </Widget.Header>
+        <Widget>
 
-            <Widget.Content>
-              <p>Quizes da Galera</p>
-            </Widget.Content>
-          </Widget>
-          <Footer />
+          <Widget.Header>
+            <h1>Quizes da Galera</h1>
+          </Widget.Header>
 
-        </QuizContainer>
-        <GitHubCorner projectUrl="https://github.com/OLucasAlves" />
-      </QuizBackground>
-    </>
+          <Widget.Content>
+            <p>Quizes da Galera</p>
+          </Widget.Content>
+        </Widget>
+        <Footer />
+
+      </QuizContainer>
+      <GitHubCorner projectUrl="https://github.com/OLucasAlves" />
+    </QuizBackground>
+
   );
 }
+
