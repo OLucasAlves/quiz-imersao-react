@@ -10,17 +10,8 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Button from '../src/components/Button';
 import Input from '../src/components/Input';
+import QuizContainer from '../src/components/QuizContainer';
 
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
 
 export default function Home() {
   const router = useRouter();
@@ -57,7 +48,6 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
 
-            <Widget.Form>
               <form onSubmit={function (e) {
                 e.preventDefault();
                 router.push(`/quiz?name=${name}`);
@@ -65,18 +55,15 @@ export default function Home() {
               }}>
 
                 <Input
-                  onChange={function (e) {
-                    console.log(e.target.value);
-                    //name = e.target.value;
-                    setName(e.target.value);
-                  }}
-                  placeholder="Diz ai seu nome" />
+                  name="NomeDoUsuario"
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Diz ai seu nome" 
+                  value="name"/>
 
                 <Button type="submit" disabled={name.length === 0}>
                   Jogar {name}
                 </Button>
               </form>
-            </Widget.Form>
 
           </Widget.Content>
 
