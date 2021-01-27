@@ -4,25 +4,64 @@
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "image": "https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif",
+        "title": "Quais os 4 tipo de análise de dados?",
+        "description": "",
+        "answer": 4,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Análise preditiva;Análise prescritiva;Análise binomial;Análise diagnóstica",
+          "Análise prescritiva;Análise Lógica;Análise descritiva;Análise diagnóstica",
+          "Análise prescritiva;Análise matemática;Análise descritiva;Análise diagnóstica",
+          "Análise preditiva;Análise prescritiva;Análise descritiva;Análise diagnóstica"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
-        "answer": 0,
+        "image": "https://media.giphy.com/media/W0cp9tTEKFPh7MbNtd/giphy.gif",
+        "title": "O que é inferência estatísca?",
+        "description": "",
+        "answer": 2,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "É a parte da estatistica que tem por objetivo fazer afirmações a partir da análise completa dos dados",
+           "É a parte da estatistica que tem por objetivo fazer afirmações a partir de uma amostra sobre um universo",
+           "É a parte da estatistica que tem por objetivo fazer suposições a partir da análise completa dos dados",
+           "É a parte da estatistica que tem por objetivo fazer negações a partir da análise completa dos dados"
+        ]
+      },
+
+      {
+        "image": "https://media.giphy.com/media/l0HlJH7PI5SNWhFuw/giphy.gif",
+        "title": "O que faz a função modelo.score(X_train, Y_train)?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+           "irá verificar o número do conjunto de treino e irá comparar com o valor esperado do conjunto de treino",
+           "irá verificar o número que seu modelo previu e irá comparar com o valor esperado do conjunto de teste",
+           "irá verificar o número que seu modelo previu e irá comparar com o valor esperado do conjunto de treino",
+           "Todas estão corretas"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/g01ZnwAUvutuK8GIQn/giphy.gif",
+        "title": "O que é uma matriz de confusão?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+           "É uma métrica voltada para modelos de classificação e tem como objetivo calcular a quantidade de falso positivo e falso negativo",
+           "É uma métrica voltada para modelos de previsão e tem como objetivo calcular a quantidade de falso positivo e falso negativo",
+           "É uma métrica voltada para modelos de predição e tem como objetivo calcular a quantidade de falso positivo e falso negativo",
+           "Todas estão erradas"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/oVpjKztlM9joc/giphy.gif",
+        "title": "Sobre o pandas é correto afirmar?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+           "é um software de código aberto para matemática, ciência e engenharia",
+           "O pandas é um pacote Python que fornece estruturas de dados rápidas e lexíveis e expressivas projetadas para tornar o trabalho com dados “relacional” ou “rotulados” fácil e intuitivo",
+           "é uma biblioteca de visualização Python baseada em matplotlib",
+           "é uma biblioteca de visualização interativa Python que utiliza navegadores web modernos para apresentação"
         ]
       }
     ],
