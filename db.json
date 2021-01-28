@@ -1,13 +1,13 @@
 {
     "bg": "https://i.ibb.co/Jj5F7Fv/3842271.jpg",
-    "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "title": "Quiz Data Science",
+    "description": "Teste os seus conhecimentos sobre Data Science",
     "questions": [
       {
         "image": "https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif",
         "title": "Quais os 4 tipo de análise de dados?",
         "description": "",
-        "answer": 4,
+        "answer": 3,
         "alternatives": [
           "Análise preditiva;Análise prescritiva;Análise binomial;Análise diagnóstica",
           "Análise prescritiva;Análise Lógica;Análise descritiva;Análise diagnóstica",
@@ -19,7 +19,7 @@
         "image": "https://media.giphy.com/media/W0cp9tTEKFPh7MbNtd/giphy.gif",
         "title": "O que é inferência estatísca?",
         "description": "",
-        "answer": 2,
+        "answer": 1,
         "alternatives": [
            "É a parte da estatistica que tem por objetivo fazer afirmações a partir da análise completa dos dados",
            "É a parte da estatistica que tem por objetivo fazer afirmações a partir de uma amostra sobre um universo",
@@ -32,7 +32,7 @@
         "image": "https://media.giphy.com/media/l0HlJH7PI5SNWhFuw/giphy.gif",
         "title": "O que faz a função modelo.score(X_train, Y_train)?",
         "description": "",
-        "answer": 3,
+        "answer": 2,
         "alternatives": [
            "irá verificar o número do conjunto de treino e irá comparar com o valor esperado do conjunto de treino",
            "irá verificar o número que seu modelo previu e irá comparar com o valor esperado do conjunto de teste",
@@ -44,7 +44,7 @@
         "image": "https://media.giphy.com/media/g01ZnwAUvutuK8GIQn/giphy.gif",
         "title": "O que é uma matriz de confusão?",
         "description": "",
-        "answer": 1,
+        "answer": 0,
         "alternatives": [
            "É uma métrica voltada para modelos de classificação e tem como objetivo calcular a quantidade de falso positivo e falso negativo",
            "É uma métrica voltada para modelos de previsão e tem como objetivo calcular a quantidade de falso positivo e falso negativo",
@@ -56,7 +56,7 @@
         "image": "https://media.giphy.com/media/oVpjKztlM9joc/giphy.gif",
         "title": "Sobre o pandas é correto afirmar?",
         "description": "",
-        "answer": 2,
+        "answer": 1,
         "alternatives": [
            "é um software de código aberto para matemática, ciência e engenharia",
            "O pandas é um pacote Python que fornece estruturas de dados rápidas e lexíveis e expressivas projetadas para tornar o trabalho com dados “relacional” ou “rotulados” fácil e intuitivo",
