@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactLoading from 'react-loading';
+import { useRouter } from 'next/router'
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -10,10 +11,12 @@ import QuizContainer from '../src/components/QuizContainer';
 import AlternativesForm from '../src/components/AlternativesForm';
 
 function ResultWidget({ results }) {
+  const router = useRouter()
+  const { name } = router.query
   return (
     <Widget>
       <Widget.Header>
-        Tela de Resultado:
+        Tela de Resultado do {name}
     </Widget.Header>
 
       <Widget.Content>
@@ -22,7 +25,7 @@ function ResultWidget({ results }) {
         {' '}
           {results.filter((x) => x).length}
           {' '}
-        perguntas
+        perguntas {name}
       </p>
         <ul>
           {results.map((result, index) => (
@@ -67,13 +70,17 @@ function QuestionWidget({
   totalQuestions,
   onSubmit,
   addResult,
+
+  
 }) {
   const [selectedAlternative, setSelectedAlternatives] = React.useState(undefined);
   const [isQuestionSubmited, setIsQuestionSubmited] = React.useState(false);
   const questionId = `question__${questionIndex}`;
   const isCorrect = selectedAlternative === question.answer;
   const hasAlternativeSelected = selectedAlternative !== undefined;
+  
   return (
+    
     <Widget>
       <Widget.Header>
         {/* <BackLinkArrow href="/" /> */}
