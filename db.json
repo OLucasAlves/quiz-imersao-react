@@ -66,10 +66,10 @@
       }
     ],
     "external": [
-      
-      "https://chessquiz-alura.leo0liveira.vercel.app",
+    
       "https://mrrobot-quiz.xandowski.vercel.app",
-      "https://alura-quiz-avengers.fernanda-kipper.vercel.app"
+      "https://alura-quiz-avengers.fernanda-kipper.vercel.app",
+      "https://chessquiz-alura.leo0liveira.vercel.app",
       
     ],
     "theme": {
