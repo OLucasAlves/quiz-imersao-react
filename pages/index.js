@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Head from 'next/head'
 import { useRouter } from 'next/router';
+import { motion } from  'framer-motion';
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -11,7 +12,7 @@ import GitHubCorner from '../src/components/GitHubCorner';
 import Button from '../src/components/Button';
 import Input from '../src/components/Input';
 import QuizContainer from '../src/components/QuizContainer';
-
+import Link from '../src/components/Link';
 
 export default function Home() {
   const router = useRouter();
@@ -41,45 +42,90 @@ export default function Home() {
       </Head>
       <QuizContainer>
         <QuizLogo />
-        <Widget>
+        <Widget
+          as={motion.section}
+          transiton={{ delay: 0,duration:0.5 }}
+          variants={{
+            show: {opacity: 1,y: '0'},
+            hidden: {opacity: 0, y:'100%'}
+          }}
+          initial="hidden"
+          animate="show"
+        >
 
           <Widget.Header>
             <h1>Data Science Quiz</h1>
           </Widget.Header>
           <Widget.Content>
 
-              <form onSubmit={function (e) {
-                e.preventDefault();
-                router.push(`/quiz?name=${name}`);
-                console.log('Fazendo uma submissão por meio do React')
-              }}>
+            <form onSubmit={function (e) {
+              e.preventDefault();
+              router.push(`/quiz?name=${name}`);
+              console.log('Fazendo uma submissão por meio do React')
+            }}>
 
-                <Input
-                  name="NomeDoUsuario"
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Diz ai seu nome" 
-                  value="name"/>
+              <Input
+                name="NomeDoUsuario"
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Diz ai seu nome"
+                value="name" />
 
-                <Button type="submit" disabled={name.length === 0}>
-                  Jogar {name}
-                </Button>
-              </form>
+              <Button type="submit" disabled={name.length === 0}>
+                Jogar {name}
+              </Button>
+            </form>
 
           </Widget.Content>
 
         </Widget>
 
-        <Widget>
+        <Widget
+          as={motion.section}
+          s
+          variants={{
+            show: {opacity: 1},
+            hidden: {opacity: 0}
+          }}
+          initial="hidden"
+          animate="show"
+        >
 
           <Widget.Header>
             <h1>Quizes da Galera</h1>
           </Widget.Header>
 
           <Widget.Content>
-            <p>Quizes da Galera</p>
+            <ul>
+              {db.external.map((linkExterno) => {
+                const [projectName, githubUser] = linkExterno
+                .replace(/\//g, '')
+                .replace('https:', '')
+                .replace('.vercel.app', '')
+                .split('.');
+                return(
+                  <li>
+                    <Widget.Topic
+                      as={Link} 
+                      href={`/quiz/${projectName}___${githubUser}`}>
+                      {`${githubUser}/${projectName}`}
+                    </Widget.Topic> 
+                  </li>
+                ) 
+              })}
+            </ul>
+
           </Widget.Content>
         </Widget>
-        <Footer />
+        <Footer 
+          as={motion.footer}
+          transiton={{ delay: 0,duration:0.5 }}
+          variants={{
+            show: {opacity: 1,y: '0'},
+            hidden: {opacity: 0, y:'100%'}
+          }}
+          initial="hidden"
+          animate="show"
+        />
 
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/OLucasAlves" />

@@ -66,7 +66,9 @@
       }
     ],
     "external": [
-      ""
+      "https://ai-quiz.idcesares.vercel.app",
+      "https://mariaquiz.mariarubinger.vercel.app/",
+      "https://mrrobot-quiz.xandowski.vercel.app/"
     ],
     "theme": {
       "colors": {
