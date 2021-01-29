@@ -130,9 +130,10 @@ function QuestionWidget({
                 data-status={isQuestionSubmited && alternativeStatus}
               >
                 <input
+                  style={{ display: "none" }}
                   id={alternativeId}
                   name={questionId}
-                  onChange={() => setSelectedAlternatives(alternativeIndex)}
+                  onClick={() => setSelectedAlternatives(alternativeIndex)}
                   type="radio"
                 />
                 {alternative}

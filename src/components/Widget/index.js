@@ -66,7 +66,7 @@ Widget.Topic = styled.a`
   padding: 10px 15px;
   margin-bottom: 8px;
   cursor: pointer;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: ${({ theme }) => theme.borderRadius};  
   transition: .3s;
   display: block;
   
