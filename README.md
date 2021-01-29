@@ -3,7 +3,7 @@
 ## 💻 Data Science Quiz
 Projeto criado durante a Imersão React da [Alura](https://www.alura.com.br/).
 
-Link demo do projeto [Data Science Quiz](https://quiz-imersao-react.olucasalves.vercel.app//).
+Link demo do projeto [Data Science Quiz](https://quiz-imersao-react.olucasalves.vercel.app/).
 
 <h1 align="center">
     <img style="width:70%" alt="datasciencequiz" src="https://i.ibb.co/PFRCY3f/Screenshot-23.png" />
