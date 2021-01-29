@@ -66,9 +66,11 @@
       }
     ],
     "external": [
-      "https://ai-quiz.idcesares.vercel.app",
-      "https://mariaquiz.mariarubinger.vercel.app/",
-      "https://mrrobot-quiz.xandowski.vercel.app/"
+      
+      "https://chessquiz-alura.leo0liveira.vercel.app",
+      "https://mrrobot-quiz.xandowski.vercel.app",
+      "https://alura-quiz-avengers.fernanda-kipper.vercel.app"
+      
     ],
     "theme": {
       "colors": {
